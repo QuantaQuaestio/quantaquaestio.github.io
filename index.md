@@ -2,5 +2,5 @@
 layout: home
 title:  "Welcome"
 ---
-Hello! This is my new Minimal Mistakes blog.  
-Replace this with your intro content.
+Hector Chaires
+My personal blog where I track what I learn in computer science.  
