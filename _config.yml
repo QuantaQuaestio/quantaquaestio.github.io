@@ -1,34 +1,114 @@
-# ──────────────────────────────────────────────────────────────────────────
-# Site basics (yours may already have most of this)
-title:   "Hector Chaires"            # your site’s title
-baseurl: ""                          # no sub‐folder
-url:     "https://quantaquaestio.github.io"
+# ───────────────────────────────────────────────────────────────────────────
+# Basic Site Settings
+locale: "en-US"
+title:  "Hector Chaires"
+title_separator: "-"             # how Title and Page Title are joined
+description: "Comp Chemistry • CS"
+url:    "https://quantaquaestio.github.io"    # your live site URL
+baseurl: ""                      # leave blank for user sites
+repository: "quantaquaestio/quantaquaestio.github.io"
 
-# ── Theme & Plugins ───────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────────────
+# Theme & Plugins
 remote_theme: mmistakes/minimal-mistakes@4.27.1
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from   # handy for future URL changes
 
-# ── Force Dark Palette ────────────────────────────────────────────────────
-minimal_mistakes_skin: "dark"        # ← switches to the inverted (dark) scheme
+# ───────────────────────────────────────────────────────────────────────────
+# Dark-mode skin
+minimal_mistakes_skin: "dark"
 
-# ── Optional Extras ───────────────────────────────────────────────────────
-paginate: 5                          # show n posts per page on the home layout
-search: true                         # enable the search box in the header
-
+# ───────────────────────────────────────────────────────────────────────────
+# Author profile (sidebar widget)
 author:
-  avatar: "/assets/images/avatar.jpg"
-  name:   "Hector Chaires"
-  bio:    "Computational Chemisttry | CS"
-  location: "Cambridge, MA"
-  email:  "hectorchairesmoriel@gmail.com"
-  googlescholar: 
-  github: "QuantaQuaestio"
+  avatar:    "/assets/images/avatar.jpg"    # put your circular headshot here
+  name:      "Hector Chaires"
+  bio:       "Computational Chemist • ML"
+  location:  "Cambridge, MA"
+  email:     "hectorchairesmoriel@gmail.com"           
+  googlescholar: "https://scholar.google.com/…"  # TODO
+  github:    "QuantaQuaestio"
+  linkedin:  "https://www.linkedin.com/in/hector-chaires-a382b080/"  # TODO
 
+# ───────────────────────────────────────────────────────────────────────────
+# Markdown/Kramdown processing
+markdown: kramdown
+highlighter: rouge
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+kramdown:
+  input:        GFM
+  hard_wrap:    false
+  auto_ids:     true
+  footnote_nr:  1
+  entity_output: as_char
+  toc_levels:   1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
+# ───────────────────────────────────────────────────────────────────────────
+# Permalinks & timezone
+permalink: /:categories/:title/
+timezone:  America/New_York
+
+# ───────────────────────────────────────────────────────────────────────────
+# Feed
+atom_feed:
+  hide: false
+  path: feed.xml
+
+# ───────────────────────────────────────────────────────────────────────────
+# Defaults: apply layouts & sidebar everywhere
 defaults:
+  # Posts
   - scope:
-      path: ""      # all files
-      type: pages   # apply to pages (including index.md)
+      path: ""
+      type: posts
     values:
+      layout:         single
       author_profile: true
+      read_time:      true
+      share:          true
+      related:        true
+  # Pages (including about.md, projects.md, etc.)
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout:         single
+      author_profile: true
+
+# ───────────────────────────────────────────────────────────────────────────
+# Optional: search box in header
+search: true
+
+# ───────────────────────────────────────────────────────────────────────────
+# Exclude these from your build (common debris)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - tmp
+  - .bundle
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/vendor
+
+# ───────────────────────────────────────────────────────────────────────────
+# Future-proof extras (uncomment as needed)
+# comments:
+#   provider: "utterances"
+#   utterances:
+#     theme: "github-dark"
+#
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     tracking_id: "UA-XXXXXX-X"
+#
+# paginate: 5
+# paginate_path: "/page/:num/"
+
