@@ -19,11 +19,16 @@ search: true                         # enable the search box in the header
 author:
   avatar: "/assets/images/avatar.jpg"
   name:   "Hector Chaires"
-  bio:    "Computational Chemist • ML"
+  bio:    "Computational Chemisttry | CS"
   location: "Cambridge, MA"
-  email:  "you@example.com"
-  googlescholar: "https://scholar.google.com/…"
-  github: "hectorchaires"
-  bluesky: "hector.bsky.social"
-  linkedin: "https://linkedin.com/in/yourprofile"
-  twitter:  "hectorchaires"
+  email:  "hectorchairesmoriel@gmail.com"
+  googlescholar: 
+  github: "QuantaQuaestio"
+
+
+defaults:
+  - scope:
+      path: ""      # all files
+      type: pages   # apply to pages (including index.md)
+    values:
+      author_profile: true
