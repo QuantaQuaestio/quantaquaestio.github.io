@@ -15,3 +15,15 @@ minimal_mistakes_skin: "dark"        # ← switches to the inverted (dark) schem
 # ── Optional Extras ───────────────────────────────────────────────────────
 paginate: 5                          # show n posts per page on the home layout
 search: true                         # enable the search box in the header
+
+author:
+  avatar: "/assets/images/avatar.jpg"
+  name:   "Hector Chaires"
+  bio:    "Computational Chemist • ML"
+  location: "Cambridge, MA"
+  email:  "you@example.com"
+  googlescholar: "https://scholar.google.com/…"
+  github: "hectorchaires"
+  bluesky: "hector.bsky.social"
+  linkedin: "https://linkedin.com/in/yourprofile"
+  twitter:  "hectorchaires"
