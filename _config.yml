@@ -1,14 +1,17 @@
-# Site settings
-title:   "Hector Alberto Chaires"
-baseurl: ""                       # no subpath for USERNAME.github.io
-url:     "https://hectorchaires.github.io"
+# ──────────────────────────────────────────────────────────────────────────
+# Site basics (yours may already have most of this)
+title:   "Hector Chaires"            # your site’s title
+baseurl: ""                          # no sub‐folder
+url:     "https://quantaquaestio.github.io"
 
-# Use the Minimal Mistakes remote theme
+# ── Theme & Plugins ───────────────────────────────────────────────────────
 remote_theme: mmistakes/minimal-mistakes@4.27.1
-
-# Plugins
 plugins:
   - jekyll-include-cache
 
-# Optional features
-paginate: 5
+# ── Force Dark Palette ────────────────────────────────────────────────────
+minimal_mistakes_skin: "dark"        # ← switches to the inverted (dark) scheme
+
+# ── Optional Extras ───────────────────────────────────────────────────────
+paginate: 5                          # show n posts per page on the home layout
+search: true                         # enable the search box in the header
