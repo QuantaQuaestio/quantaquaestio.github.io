@@ -1,0 +1,14 @@
+# Site settings
+title:   "My Minimal Mistakes Blog"
+baseurl: ""                       # no subpath for USERNAME.github.io
+url:     "https://hectorchaires.github.io"
+
+# Use the Minimal Mistakes remote theme
+remote_theme: mmistakes/minimal-mistakes@4.27.1
+
+# Plugins
+plugins:
+  - jekyll-include-cache
+
+# Optional features
+paginate: 5
