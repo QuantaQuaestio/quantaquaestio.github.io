@@ -26,7 +26,7 @@ minimal_mistakes_skin: "dark"
 author:
   avatar:    "/assets/images/avatar.png"    # put your circular headshot here
   name:      "Hector Chaires"
-  bio:       "Computational Chemist • ML"
+  bio:       "Computational Chemist • CS"
   location:  "Cambridge, MA"
   email:     "hectorchairesmoriel@gmail.com"           
   googlescholar: "https://scholar.google.com/…"  # TODO
