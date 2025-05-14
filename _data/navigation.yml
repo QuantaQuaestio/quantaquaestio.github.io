@@ -1,6 +1,6 @@
 main:
-  - title: "Quick-Start Guide"
-    url: /docs/quick-start-guide/
+  - title: "Courses"
+    url: /courses/
   - title: "Posts"
     url: /year-archive/
   - title: "Categories"
