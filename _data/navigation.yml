@@ -1,11 +1,14 @@
-main:
- # - title: "Publications"
-    url: /publications/
-  - title: "Tutorials"
-    url: /tutorials/
-  - title: "Blog"
-    url: /
-  - title: "Videos"
-    url: /videos/
-  - title: "Resources"
-    url: /resources/
+- title: "Home"
+  url: /
+
+- title: "Blog"
+  url: /blog/
+
+- title: "About"
+  url: /about/
+
+- title: "Projects"
+  url: /projects/
+
+- title: "Contact"
+  url: /contact/
