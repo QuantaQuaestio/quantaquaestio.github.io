@@ -5,7 +5,7 @@ title:  "Hector Chaires"
 title_separator: "-"             # how Title and Page Title are joined
 description: "Comp Chemistry • CS"
 url:    "https://quantaquaestio.github.io"    # your live site URL
-baseurl: ""                      # leave blank for user sites
+baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "quantaquaestio/quantaquaestio.github.io"
 
 # ───────────────────────────────────────────────────────────────────────────
