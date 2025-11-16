@@ -3,7 +3,7 @@
 locale: "en-US"
 title:  "Hector Chaires"
 title_separator: "-"             # how Title and Page Title are joined
-description: "Interested in Computational Chemistry and CS"
+description: "Learning Computational Chemistry and CS"
 url:    "https://quantaquaestio.github.io"    # your live site URL
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "quantaquaestio/quantaquaestio.github.io"
@@ -26,7 +26,7 @@ minimal_mistakes_skin: "dark"
 author:
   avatar:    "/assets/images/avatar.png"    # put your circular headshot here
   name:      "Hector Chaires"
-  bio:       "Interested in Computational Chemistry and CS"
+  bio:       "Learning Computational Chemistry and CS"
   location:  "Cambridge, MA"
   email:     "hectorchairesmoriel@gmail.com"           
   googlescholar: "https://scholar.google.com/…"  # TODO
