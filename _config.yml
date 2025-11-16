@@ -3,7 +3,7 @@
 locale: "en-US"
 title:  "Hector Chaires"
 title_separator: "-"             # how Title and Page Title are joined
-description: "Comp Chemistry • CS"
+description: "Interested in Computational Chemistry and CS"
 url:    "https://quantaquaestio.github.io"    # your live site URL
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "quantaquaestio/quantaquaestio.github.io"
