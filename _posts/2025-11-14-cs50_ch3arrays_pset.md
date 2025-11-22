@@ -612,7 +612,47 @@ sort3 uses: selection sort
 
 How do you know?: it takes less time to run on the reversed set than sort 1 because it places numbers correctly at every switch 
 ```
+**Exercise Collatz - Write a function that runs the collatz algorithm to get to 1 and prints out the number of steps taken using recursion**
 
+```C
+#include <stdio.h>
+#include <cs50.h>
+
+int collatz(int n);
+
+int main(void)
+{
+
+    int input = get_int("number to run collatz:\n");
+
+    int steps = collatz(input);
+    printf("took this many steps: %i\n", steps);
+}
+
+//to keep track of number of steps i will initialize 0 variable and increase it every time it goes through one of the steps.
+int collatz(int n)
+{
+    int count = 0;
+    //base case
+    if(n == 1)
+    {
+        return count;
+    }
+
+    //if even
+    else if((n % 2) == 0)
+    {
+        count = 1 + collatz(n / 2);
+    }
+
+    //otherwise odd
+    else
+    {
+        count = 1 + collatz(3 * n + 1);
+    }
+    return count;
+}
+```
 
 
 
