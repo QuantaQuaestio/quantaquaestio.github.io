@@ -5,6 +5,64 @@ tags:
   - cs
 ---
 
+**Exercise 3 Recover - Make a program that takes a raw file of lost jpgs as input and sorts through the bytes to regenerate the individual images.**
+
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
+int main(int argc, char *argv[])
+{
+    //Your program should accept exactly one command-line argument, the name of a forensic image from which to recover JPEGs.
+    //If your program is not executed with exactly one command-line argument, it should remind the user of correct usage,
+    //and main should return 1.
+    if(argc != 2)
+    {
+        printf("Correct usage ./recover FILE\n");
+        return 1;
+    }
+    //If the forensic image cannot be opened for reading, your program should inform the user as much, and main should return 1.
+
+    FILE *card = fopen(argv[1], "r");
+
+    //buffer for block of data
+    uint8_t buffer[512];
+
+    FILE *img = NULL;
+    int count = 0;
+    //while ther is still data being read out
+    while(fread(buffer, 1, 512, card) == 512)
+    {
+        //create jpegs from the data
+        if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff)
+        {
+            if(img != NULL)
+            {
+                fclose(img);
+            }
+
+            char filename[8];
+            sprintf(filename, "%03i.jpg", count);
+            img = fopen(filename, "w");
+            count ++;
+        }
+
+        if(img != NULL)
+        {
+            fwrite(buffer, 1, 512, img);
+        }
+    }
+    if(img != NULL)
+    {
+        fclose(img);
+    }
+    fclose(card);
+}
+```
+
+
 **Exercise 2 Filters - Complete the helper functions to implement greyscale, reflection, sepia, and blurred filters to an image.**
 
 ```C
