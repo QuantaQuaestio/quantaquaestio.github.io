@@ -255,3 +255,35 @@ int main(int argc, char *argv[])
     fclose(output);
 }
 ```
+
+**Section 4 PDF Check - Write program to check if a file is a pdf.**
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
+
+
+int main(int argc, char *argv[])
+{
+    if(argc != 2)
+    {
+        printf("correct usage ./checkpdf FILE");
+    }
+
+    FILE *pdf = fopen(argv[1], "r");
+
+    uint8_t buffer[512];
+
+    while(fread(buffer, 1, 512, pdf) == 512)
+    {
+        if(buffer[0] == 0x25 && buffer[1] == 0x50 && buffer[2] == 0x44 && buffer[3] == 0x46)
+        {
+            printf("file is pdf\n");
+        }
+    }
+    fclose(pdf);
+
+
+}
+```
