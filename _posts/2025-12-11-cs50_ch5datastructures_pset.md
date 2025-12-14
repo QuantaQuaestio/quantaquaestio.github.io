@@ -4,7 +4,163 @@ date: 2025-12-11
 tags:
   - cs
 ---
-**Exercise 2 Spell Checker - Implement the hash, load, unload, check, and size functions of a spellchecker initially using a 26 index hash function. V2 Uses 104 buckets by hashing based on first letter and 4 buckets for each letter based on word lengths <=3, <= 6, <=9, and >10.**
+**Exercise 2 Spell Checker - Implement the hash, load, unload, check, and size functions of a spellchecker initially using a 26 index hash function. V3 does hasing using first letter, length up to 10, and second letter resulting in 7456 total buckets. V2 Uses 104 buckets by hashing based on first letter and 4 buckets for each letter based on word lengths <=3, <= 6, <=9, and >10.**
+
+```C
+V3
+Student                                                         Staff
+WORDS MISSPELLED:     955                                       WORDS MISSPELLED:     955
+WORDS IN DICTIONARY:  143091                                    WORDS IN DICTIONARY:  143091
+WORDS IN TEXT:        17756                                     WORDS IN TEXT:        17756
+TIME IN load:         0.03                                    | TIME IN load:         0.04
+TIME IN check:        0.03                                    | TIME IN check:        0.02
+TIME IN size:         0.00                                      TIME IN size:         0.00
+TIME IN unload:       0.00                                    | TIME IN unload:       0.02
+TIME IN TOTAL:        0.06                                    | TIME IN TOTAL:        0.07
+```
+
+```C
+//V3 Implements a dictionary's functionality
+
+#include <ctype.h>
+#include <stdbool.h>
+#include <string.h>
+#include "dictionary.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+
+int word_count = 0;
+
+// Represents a node in a hash table
+typedef struct node
+{
+    char word[LENGTH + 1];
+    struct node *next;
+} node;
+
+// TODO: Choose number of buckets in hash table
+const unsigned int N = 7456;
+
+// Hash table
+node *table[N];
+
+// Returns true if word is in dictionary, else false
+bool check(const char *word)
+{
+    // TODO
+    char lword[LENGTH + 1];
+    //while you are not at the null character keep lowercasing word and adding it to the same i index of lword increasing i every time
+    int i = 0;
+    while(word[i] != '\0')
+    {
+        lword[i] = tolower(word[i]);
+        i++;
+    }
+    lword[i] = '\0';
+    //get bucket in hash table to search based on current implementation indexing by first letter
+    unsigned int index = hash(lword);
+    //want to compare to the linked list at each index using a loop to see if word is there or not
+    //maybe can do a while loop that runs until true where the node to check is updated every time based on the current node to
+    //move down the linked list
+    node *cursor = table[index];
+    while(cursor != NULL)
+    {
+        if(strcmp(lword, cursor->word) == 0)
+        {
+            return true;
+        }
+        //move the cursor to point to the next word
+        cursor = cursor->next;
+    }
+    return false;
+}
+
+// Hashes word to a number
+unsigned int hash(const char *word)
+{
+    // TODO: Improve this hash function
+    int letter_index = toupper(word[0]) - 'A';
+    int letter2_index = toupper(word[1]) - 'A';
+    int length = strlen(word);
+    if(word[0] == '\'')
+    {
+        return 0;
+    }
+    if(word[1] == '\0')
+    {
+        letter2_index = 0;
+    }
+    if (length > 10)
+    {
+        length = 10;
+    }
+    return (letter_index * 26 + letter2_index) * 11 + length;
+}
+
+// Loads dictionary into memory, returning true if successful, else false
+bool load(const char *dictionary)
+{
+    // TODO first create buffer for every word then as long as there are still characters keep loading them into their own words array
+
+    //create empty array for words and open dictionary file
+    char word[LENGTH + 1];
+    FILE *dic = fopen(dictionary, "r");
+
+    if(dic == NULL)
+    {
+        return false;
+    }
+
+    //read each word in the file
+    while(fscanf(dic, "%s", word) != EOF)
+    {
+        node *new_node = malloc(sizeof(node));
+        if(new_node == NULL)
+        {
+            return false;
+        }
+        strcpy(new_node->word, word);
+
+        unsigned int index = hash(word);
+        new_node->next = table[index];
+        table[index] = new_node;
+        word_count ++;
+
+    }
+    //close file
+    fclose(dic);
+
+    return true;
+}
+
+// Returns number of words in dictionary if loaded, else 0 if not yet loaded
+unsigned int size(void)
+{
+    // TODO
+    {
+        return word_count;
+    }
+}
+
+// Unloads dictionary from memory, returning true if successful, else false
+bool unload(void)
+{
+    // TODO
+    for(int i = 0; i < 26; i++)
+    {
+        node *cursor = table[i];
+        while(cursor != NULL)
+        {
+            node *tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+        }
+    }
+    return true;
+}
+
+```
 
 ```C
 V2
