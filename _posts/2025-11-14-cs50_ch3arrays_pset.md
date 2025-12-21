@@ -1,5 +1,5 @@
 ---
-title: "2025-11-14-cs50_ch3arrays_pset"
+title: "2025-11-14-cs50_ch3algorithms_pset"
 date: 2025-11-14
 tags:
   - cs
