@@ -1,5 +1,5 @@
 ---
-title: "2025-10-28-cs50_ch2_C_pset"
+title: "2025-10-28-cs50_ch2arrays_pset"
 date: 2025-10-28
 tags:
   - cs
