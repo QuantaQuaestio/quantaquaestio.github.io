@@ -5,83 +5,12 @@ tags:
   - cs
 ---
 
-<!DOCTYPE html>
 
-<html lang="en">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-        </script>
-    </head>
-    <body>
-        <div class="header">
-            <h1>Trivia!</h1>
-        </div>
+**Assignment 1 Trivia - Build an interactive trivia page using HTML, CSS, and JavaScript.**
 
-        <div class="container">
-            <div class="section">
-                <h2>Part 1: Multiple Choice </h2>
-                <hr>
-                <!-- TODO: Add multiple choice question here -->
-                <h3>What color is the main campus building?</h3>
-                <button id = "crimson">crimson</button>
-                <button id = "pink">pink</button>
-                <button id = "blue">blue</button>
-                <button id = "yellow">yellow</button>
-                <button id = "white">white</button>
-                <div id="feedback" style = "margin-top: 1em;"></div>
-                <script>
-                    let message = null;
-                    const incorrectIds = ['blue', 'pink', 'yellow', 'white'];
+👉 [Click here to try it live!](https://quantaquaestio.github.io/assets/cs50/trivia/)
 
-                    incorrectIds.forEach(id => {
-                        document.querySelector(`#${id}`).addEventListener('click', function (){
-                            document.querySelector(`#${id}`).style.backgroundColor = 'red';
-
-                            const feedback = document.querySelector('#feedback');
-                            feedback.textContent = 'Incorrect';
-                        });
-                    });
-
-                    document.querySelector('#crimson').addEventListener('click', function () {
-                        document.querySelector('#crimson').style.backgroundColor = 'green';
-                        document.querySelector('#feedback').textContent = 'Correct!';
-                    })
-                </script>
-            </div>
-
-            <div class="section">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-                <!-- TODO: Add free response question here -->
-                <h3>How is your day today?</h3>
-                <form>
-                    <input id="response-input" autocomplete="off" autofocus name="q" placeholder="Amazing" type="search">
-                    <button id="submit-button" type="button">Submit</button>
-                    <div id="feedback-free" style = "margin-top: 1em;"></div>
-                </form>
-                    <script>
-                        let input = document.querySelector('#response-input');
-                        let button = document.querySelector('#submit-button');
-                        button.addEventListener('click', function(event) {
-                            event.preventDefault();
-                            console.log("User typed:", input.value.toUpperCase());
-                            if(input.value.trim().toUpperCase() === 'BXP')
-                            {
-                                input.style.backgroundColor = 'green';
-                                document.querySelector('#feedback-free').textContent = 'Correct!';
-                            }
-                            else
-                            {
-                                input.style.backgroundColor = 'red';
-                                document.querySelector('#feedback-free').textContent = 'Incorrect!';
-                            }
-                        })
-                    </script>
-            </div>
-        </div>
-    </body>
-</html>
+I learned how to:
+- Use event listeners to handle form submissions and button clicks
+- Dynamically change DOM elements and styles
+- Embed self-contained JavaScript logic into static sites
