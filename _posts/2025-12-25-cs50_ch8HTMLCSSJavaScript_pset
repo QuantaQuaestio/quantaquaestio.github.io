@@ -5,12 +5,16 @@ tags:
   - cs
 ---
 
+## 🧠 CS50: Chapter 8 — HTML, CSS, JavaScript
 
-**Assignment 1 Trivia - Build an interactive trivia page using HTML, CSS, and JavaScript.**
+**Assignment:** Build an interactive trivia page using vanilla JS.
 
-👉 [Click here to try it live!](https://quantaquaestio.github.io/assets/cs50/trivia/)
+👉 [**Click here to try the live demo!**](https://quantaquaestio.github.io/assets/cs50/trivia/)
 
-I learned how to:
-- Use event listeners to handle form submissions and button clicks
-- Dynamically change DOM elements and styles
-- Embed self-contained JavaScript logic into static sites
+---
+
+### ✅ What I Learned
+
+- How to use event listeners to handle form submissions and button clicks
+- How to dynamically modify DOM elements and inline styles
+- How to embed fully self-contained HTML+JS apps into a static Jekyll/GitHub Pages site
