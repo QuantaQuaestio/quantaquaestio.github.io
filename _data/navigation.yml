@@ -1,12 +1,12 @@
 main:
-  - title: "Courses"
-    url: /courses/
-  - title: "Posts"
-    url: /year-archive/
-  - title: "Categories"
-    url: /categories/
-  - title: "About"
-    url: /about/
-  - title: "External Link"
-    url: https://google.com
-    target: _blank
+#  - title: "Courses"
+#    url: /courses/
+#  - title: "Posts"
+#    url: /year-archive/
+#  - title: "Categories"
+#    url: /categories/
+#  - title: "About"
+#    url: /about/
+#  - title: "External Link"
+#    url: https://google.com
+#    target: _blank
