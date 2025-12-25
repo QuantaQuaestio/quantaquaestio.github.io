@@ -1,11 +1,11 @@
 main:
-  - title: "Publications"
-    url: /publications/
-  - title: "Tutorials"
-    url: /tutorials/
+#  - title: "Publications"
+#    url: /publications/
+#  - title: "Tutorials"
+#    url: /tutorials/
   - title: "Blog"
     url: /
-  - title: "Videos"
-    url: /videos/
-  - title: "Resources"
-    url: /resources/
+#  - title: "Videos"
+#    url: /videos/
+#  - title: "Resources"
+#    url: /resources/
