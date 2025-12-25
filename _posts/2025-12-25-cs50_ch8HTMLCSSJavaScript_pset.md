@@ -5,15 +5,15 @@ tags:
   - cs
 ---
 
-## 🧠 CS50: Chapter 8 — HTML, CSS, JavaScript
+##CS50: Chapter 8 — HTML, CSS, JavaScript
 
 **Problem 1 Trivia - Build an interactive trivia page using HTML, CSS, and JavaScript.**
 
-👉 [**Click here to try the live demo!**](https://quantaquaestio.github.io/assets/cs50/trivia/)
+👉 [**Click here to try the live demo!**](https://quantaquaestio.github.io/assets/cs50/)
 
 ---
 
-### ✅ What I Learned
+### Key Learnings
 
 - How to use event listeners to handle form submissions and button clicks
 - How to dynamically modify DOM elements and inline styles
