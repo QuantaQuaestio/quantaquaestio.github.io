@@ -7,7 +7,7 @@ tags:
 
 ## 🧠 CS50: Chapter 8 — HTML, CSS, JavaScript
 
-**Assignment:** Build an interactive trivia page using vanilla JS.
+**Assignment Build an interactive trivia page using vanilla JS.
 
 👉 [**Click here to try the live demo!**](https://quantaquaestio.github.io/assets/cs50/trivia/)
 
