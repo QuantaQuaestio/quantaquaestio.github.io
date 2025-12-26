@@ -1,0 +1,187 @@
+body {
+    background-color: #121923;
+    color: #212529;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  background-color: #000000;
+  color: #fff;
+
+  padding: 0rem 0rem;
+  margin-bottom: 0rem;
+  text-align: center;
+}
+
+/* Left image */
+.header-col.left {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 1rem;
+    min-height: 240px;
+}
+.header-video{
+    height: 240px;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Optional: center column */
+.header-col.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right column: empty or future use */
+.header-col.right {
+  background-image: url("rite1.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 240px auto;
+  min-height: 240px;
+}
+
+.header2 {
+    background-color: #121923;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.section {
+    /*padding: 0.5rem 2rem 1rem 2rem;*/
+    padding: 0rem;
+}
+
+.section:hover {
+    background-color: #121923;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+}
+
+
+input[type="text"] {
+    line-height: 1.8;
+    width: 25%;
+}
+
+input[type="text"]:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+.button-row {
+    background-color: #121923;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0rem;
+    align-items: center;
+    padding: 0rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.button-row button {
+    width: 100%;
+    height: 5rem;
+
+    background-color: #121923;
+    color: white;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+
+    transition: background-color 0.2s ease-in-out;
+}
+.button-row button:hover {
+    background-color: #800020;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: color 0s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.skills-section {
+  padding: 2rem;
+  color: white;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.skills-table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  color: white;
+}
+
+.skills-table th:nth-child(2),
+.skills-table td:nth-child(2) {
+  text-align: right;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+a {
+  color: #800020; /* Change to your preferred color */
+  text-decoration: none; /* Optional: removes underline */
+}
+
+.stars {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+.titles {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.spacer {
+  height: 2rem; /* or any spacing you want, like 1rem, 3rem, etc. */
+}
+.pending {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #fff;
+}
+
+
