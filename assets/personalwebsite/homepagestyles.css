@@ -185,3 +185,37 @@ a {
 }
 
 
+.courses-section {
+  padding: 2rem;
+  color: white;
+}
+
+.courses-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.courses-table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+.courses-table th,
+.courses-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  color: white;
+}
+
+.courses-table th:nth-child(2),
+.courses-table td:nth-child(2) {
+  text-align: right;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
