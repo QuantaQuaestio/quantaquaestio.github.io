@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="homepagestyles.css" rel="stylesheet">
+  <title>CS Skills – Hector A. Chaires</title>
+</head>
+    <body>
+        <header class="header">
+        <div class="header-col left">
+            <video autoplay muted loop playsinline class="header-video"> /* class is to set size automatically*/
+                <source src="pagevid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="header-col center">
+            <h1>Hector A. Chaires</h1>
+        </div>
+        <div class="header-col right"></div>
+        </header>
+
+        <div class="button-row">
+            <button id="home">Home</button>
+            <button id="csskills">CS Skills</button>
+            <button id="Resume">Resume</button>
+            <button id="courses">Courses</button>
+            <button id="projects">Projects</button>
+            <button id="misc">Miscellaneous</button>
+        </div>
+
+  <main>
+
+        <span class="pending">Under Construction</span>
+
+
+      </tbody>
+    </table>
+  </main>
+
+
+
+    <script>
+    document.getElementById("home").onclick = function () {
+        window.location.href = "index.html";
+    };
+    document.getElementById("csskills").onclick = function () {
+        window.location.href = "cs-skills.html";
+    };
+    document.getElementById("Resume").onclick = function () {
+        window.location.href = "resume.html";
+    };
+    document.getElementById("courses").onclick = function () {
+        window.location.href = "courses.html";
+    };
+    document.getElementById("projects").onclick = function () {
+        window.location.href = "projects.html";
+    };
+    document.getElementById("misc").onclick = function () {
+        window.location.href = "misc.html";
+    };
+    </script>
+</body>
+</html>
