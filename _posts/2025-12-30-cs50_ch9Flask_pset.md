@@ -7,7 +7,7 @@ tags:
 
 ##CS50: Chapter 9 — Flask
 
-**Problem 1 Birthdays- Complete the code to create a website where birthdays can be added using a form and stored in a birthdays database using SQL. The webapp is served using Flask and coded using python and HTML.**
+**Problem 1 Birthdays- Complete the code to create a website where birthdays can be added using a form and stored in a birthdays database using SQL. The webapp is served using Flask and coded using python, Jinja, and HTML.**
 
 
 ![Birthday App Screenshot](/assets/images/bdays.png)
