@@ -1,0 +1,150 @@
+      body {
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        background: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      .page {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 32px 24px 64px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+        letter-spacing: 0.2px;
+      }
+      .tagline {
+        color: #fff;
+        margin-bottom: 24px;
+      }
+      .note {
+        margin-bottom: 24px;
+        padding: 10px 12px;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        background: #121923;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 16px;
+      }
+      .panel {
+        background: #121923;
+        border: 1px solid #fff;
+        border-radius: 12px;
+        padding: 16px 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      .panel h2 {
+        margin-top: 0;
+        font-size: 18px;
+      }
+      label {
+        display: block;
+        margin: 10px 0 6px;
+        color: #fff;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #fff;
+        background: #000;
+        color: #fff;
+      }
+      .summary {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .pill {
+        flex: 1;
+        min-width: 180px;
+        background: #000;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 12px;
+      }
+      .pill .label {
+        color: #fff;
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+      .pill .value {
+        font-size: 22px;
+        font-weight: 600;
+        color: #fff;
+      }
+      .pill .value.positive {
+        color: #2ecc71;
+      }
+      .pill .value.negative {
+        color: #ff4d4f;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #fff;
+        color: #fff;
+        background: #000;
+      }
+      th,
+      td {
+        padding: 10px 8px;
+        text-align: left;
+      }
+      th {
+        color: #fff;
+        font-weight: 600;
+        border: 1px solid #fff;
+        font-size: 13px;
+      }
+      tr:hover td {
+        background: #1a2230;
+      }
+      .muted {
+        color: #fff;
+      }
+      .badge {
+        display: block;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: #000;
+        border: 1px solid #fff;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .tick-line {
+        margin-top: 8px;
+        color: #fff;
+        font-size: 13px;
+      }
+      .calculate {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid #fff;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+      .calculate:hover {
+        background: #1a2230;
+      }
+      input,
+      select,
+      .badge {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 12px 14px !important;
+        font-size: 16px !important;
+        height: 44px !important;
+        line-height: 20px !important;
+      }
