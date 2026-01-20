@@ -51,12 +51,22 @@ body {
 }
 
 /* Right column: empty or future use */
+
+/* Right column: background image should "fit" like the video */
 .header-col.right {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
   background-image: url("rite1.png");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 240px auto;
+  background-size: auto 240px;  /* height locked to banner */
   min-height: 240px;
+
+  /* extra safety so it doesn't create weird spacing */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .header2 {
